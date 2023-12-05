@@ -1,6 +1,13 @@
-const http = require('http');
+const express = require('express');
+const app = express();
 
-const server = http.createServer((req, res) => {
-    console.log('vivek');
+
+app.get("/", function(req, res) {
+    res.send("Vivek");
 });
-server.listen(4000);
+
+app.listen(4000, function(){
+    console.log("Server started");
+});
+
+
